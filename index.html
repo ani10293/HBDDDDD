@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎉 Happy Birthday GEETHAAAA! 🎉</title>
+    <title>🎉 Happy Birthday! 🎉</title>
     <style>
         * {
             margin: 0;
@@ -13,17 +13,16 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            height: 100vh;
             background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
             color: #ffffff;
+            padding: 20px;
+            height: 100vh;
+            overflow-y: scroll; /* Allow the entire page to scroll */
         }
 
         .container {
             text-align: center;
+            margin-bottom: 50px; /* Space for the sticky button */
         }
 
         h1 {
@@ -33,6 +32,8 @@
         }
 
         button {
+            position: fixed; /* Fix the button in place */
+            bottom: 20px; /* Space from the bottom of the screen */
             background-color: #ff6363;
             color: #fff;
             border: none;
@@ -42,6 +43,7 @@
             border-radius: 8px;
             cursor: pointer;
             transition: all 0.3s ease;
+            z-index: 10;
         }
 
         button:hover {
@@ -62,10 +64,13 @@
             margin-top: 20px;
             display: none; /* Hide the message initially */
             text-align: left;
-            max-height: 400px; /* Set a maximum height */
-            overflow-y: auto; /* Enable vertical scrolling if content exceeds the max height */
+            max-height: 400px;
+            overflow-y: auto; /* Enable scrolling inside the message */
         }
 
+        .message p {
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
